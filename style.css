@@ -71,6 +71,13 @@
     }
 }
 
+/* header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+} */
+
 /* Navbar CSS for Desktop Devices */
 .navbar {
     padding: 28px;
@@ -379,21 +386,8 @@
     margin: 0 auto;
     padding: 50px 20px;
     display: flex;
-    flex-direction: column;
+    gap: 30px;
     justify-content: center;
-    gap: 30px;
-}
-
-.features-main .features-flex-1 {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.features-main .features-flex-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 }
 
 .features-main img {
@@ -403,38 +397,475 @@
     background-color: var(--cultured);
 }
 
-.features-flex-1 .f1,.features-flex-1 .f2 {
-    max-height: 510px;
+.features-main .features-flex-1 {
+    display: flex;
+    gap: 30px;
 }
 
-.features-flex-2 .f3, .features-flex-2 .f4 {
+.features-main .features-flex-1 > div {
+    position: relative;
+    max-width: 560px;
+    max-height: 510px;
+    box-shadow: 0 0 1px var(--text-silver);
+}
+
+.features-main .features-flex-1 .f2 {
+    max-width: 340px;
+}
+
+.features-main .features-flex-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.features-main .features-flex-2 > div {
+    position: relative;
     max-width: 450px;
     max-height: 240px;
+    box-shadow: 0 0 1px var(--text-silver);
 }
 
-@media screen and (min-width: 660px) {
-    .features-main .features-flex-1 {
-        flex-direction: row;
-    }
-    .features-main .features-flex-2 {
-        flex-direction: row;
-    }
-}
-
-@media screen and (min-width: 760px) {
+@media screen and (max-width: 760px) {
     .features-main {
-        flex-direction: row;
-    }
-    .features-main .features-flex-2 {
         flex-direction: column;
     }
-    .features-flex-1 .f1 {
-        max-width: 560px;
+    .features-main .features-flex-2 {
+        flex-direction: row;
     }
-    .features-flex-1 .f2 {
-        max-width: 340px;
+    .features-main .features-flex-2 > div {
+        width: 100%;
     }
-    .features-flex-2 .f3, .f4 {
-        max-width: 450px;
+}
+
+@media screen and (max-width: 600px) {
+    .features-main .features-flex-1 {
+        flex-wrap: wrap;
+    }
+    .features-main .features-flex-1 .f2 {
+        max-width: 100%;
+    }
+    .features-main .features-flex-2 {
+        flex-wrap: wrap;
+    }
+    .features-main .features-flex-2 > div {
+        max-width: 100%;
+    }
+}
+
+/* Features content CSS */
+
+.features-main .f-details {
+    position: absolute;
+    padding: 20px;
+}
+
+.features-main .f2 .f-details {
+    bottom: 0;
+    background: rgb(255,255,255);
+background: linear-gradient(41deg, rgba(255,255,255,1) 20%, rgba(252,70,107,0) 53%);
+}
+
+.features-main .f-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgb(255,255,255);
+    background: linear-gradient(148deg, rgba(255,255,255,1) 20%, rgba(252,70,107,0) 53%);
+}
+
+.f-details .f-content .f-item-name {
+    font-weight: 700;
+    font-size: 32px;
+    font-family: "Playfair Display", serif;
+}
+
+.f-details .f-content .f-price {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Function Button CSS */
+.f-details .f-btn-container {
+    margin-left: 5px;
+    border: 1px solid black;
+}
+
+.f-details .f-btn-container .f-button {
+    padding: 10px 30px;
+    border: 1px solid black;
+    transform: translate(-5px, -5px);
+    transition: transform 0.2s ease-in;
+}
+
+.f-details .f-btn-container .f-button:hover {
+    transform: translate(0);
+    cursor: pointer;
+}
+
+/* Newsletter Section CSS */
+.newsletter-section {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.section-heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.section-heading {
+    font-weight: 700;
+    font-size: clamp(30px, 5vw, 46px);
+    font-family: "Playfair Display", serif;
+}
+
+.newsletter-section .news-input {
+    width: 420px;
+    padding: 15px 20px;
+    background-color: var(--cultured);
+    border: none;
+}
+
+.newsletter-section .news-button {
+    padding: 15px 45px;
+    border: none;
+    border-radius: 0px 4px 0px 4px;
+    color: white;
+    cursor: pointer;
+    background-color: var(--rasin-black);
+}
+
+@media screen and (max-width:650px) {
+    .newsletter-email-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .newsletter-section .news-input {
+        width: 100%;
+    }
+    .newsletter-section .news-button {
+        width: 100%;
+    }
+}
+
+/* Blogs Section */
+.blogs-section {
+    display: flex;
+}
+
+.blogs-section .blog-center {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--bright-gray);
+}
+
+/* Left and Right Sections CSS */
+.blogs-section .blog-left {
+    display: none;
+    width: 130px;
+    background-color: white;
+}
+
+.blogs-section .blog-right {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+@media screen and (min-width: 1110px) {
+    .blogs-section .blog-left, .blogs-section .blog-right {
+        display: block;
+    }
+}
+
+/* Blog Container and Blog card CSS */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.blog-container .blog-card {
+    max-width: 350px;
+    background-color: white;
+}
+
+.blog-container .blog-card img {
+    max-width: 350px;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.blog-container .blog-content {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-card .blog-content .blog-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-card .blog-content .blog-heading h4 {
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.blog-card .blog-heading p {
+    font-size: 12px;
+}
+
+.blog-card .blog-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-card .blog-details p {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.blog-card .blog-details div {
+    font-size: 12px;
+}
+
+.blog-card .blog-details .blog-read-more {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.blog-card .blog-details .blog-dash {
+    width: 40px;
+    height: 2;
+    border: 1px solid var(--rasin-black);
+}
+
+@media screen and (min-width: 800px) {
+    .blog-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Our Support CSS */
+.support-section {
+    display: flex;
+}
+
+.support-section .s-center {
+    width: 100%;
+}
+
+/* Left and Right Sections CSS */
+.support-section .s-left {
+    display: none;
+    width: 130px;
+}
+
+.support-section .s-right {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+@media screen and (min-width: 1110px) {
+    .support-section .s-left, .support-section .s-right {
+        display: block;
+    }
+}
+
+.support-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+.support-container .s-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.support-container .s-item img {
+    width: 70px;
+    height: 70px;
+}
+
+.support-container .s-item > div {
+    text-align: center;
+}
+
+.support-container .s-heading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:500px) {
+    .support-container {
+        flex-direction: column;
+    }
+}
+
+/* Brands CSS */
+.brands-section {
+    padding: 100px 20px;
+    background-color: var(--bright-gray);
+}
+
+.brands-container {
+    max-width: 1410px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+@media screen and (max-width:950px) {
+    .brands-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .brands-section {
+        padding: 50px 20px;
+    }
+
+    .brands-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brands-container img {
+        height: 100px;
+    }
+}
+
+/* Footer CSS */
+
+footer {
+    padding: 100px 20px 20px;
+}
+
+.footer-main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    display: flex;
+    gap: 100px;
+}
+
+.footer-main .footer-info {
+    max-width: 420px;
+    font-size: 14px;
+}
+
+.footer-main .footer-info .footer-heading {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.footer-main .footer-info p {
+    margin-top: 20px;
+    line-height: 28px;
+}
+
+.footer-main .footer-links-container {
+    width: 100%;
+    display: flex;
+}
+
+.footer-main .footer-links-container > div {
+    width: 25%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-main .footer-links-container h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-main .footer-links-container ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-main .footer-links-container ul a {
+    text-decoration: none;
+    color: var(--rasin-black);
+}
+
+footer .copyright-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+footer .copyright-container > div {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .footer-main {
+        gap: 10px;
+    }
+    .footer-main .footer-links-container {
+        flex-wrap: wrap;
+    }
+
+    .footer-main .footer-links-container > div {
+        width: 50%;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer-main .footer-links-container > div {
+        width: 100%;
     }
 }
