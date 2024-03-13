@@ -498,6 +498,72 @@ background: linear-gradient(41deg, rgba(255,255,255,1) 20%, rgba(252,70,107,0) 5
     cursor: pointer;
 }
 
+/* Our Support CSS */
+.support-section {
+    display: flex;
+}
+
+.support-section .s-center {
+    width: 100%;
+}
+
+/* Left and Right Sections CSS */
+.support-section .s-left {
+    display: none;
+    width: 130px;
+}
+
+.support-section .s-right {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+@media screen and (min-width: 1110px) {
+    .support-section .s-left, .support-section .s-right {
+        display: block;
+    }
+}
+
+.support-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+.support-container .s-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.support-container .s-item img {
+    width: 70px;
+    height: 70px;
+}
+
+.support-container .s-item > div {
+    text-align: center;
+}
+
+.support-container .s-heading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:500px) {
+    .support-container {
+        flex-direction: column;
+    }
+}
+
 /* Brands CSS */
 .brands-section {
     padding: 100px 20px;
