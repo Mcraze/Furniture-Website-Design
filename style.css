@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000;
+    --bg-grey: #EEEEEE;
+    --text-silver: #757575;
+    --cultured: #F5F5F5;
+    --bright-gray: #EEEEEE;
+    --rasin-black: #212121;
+    font-family: "Roboto", sans-serif;
+}
+
+.max-container-one {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.max-container-two {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+/* Header Details CSS */
+.header-details-bg {
+    display: none;
+    background-color: var(--bg-grey);
+}
+
+.header-details {
+    font-weight: 400;
+    padding: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-details ul {
+    list-style-position: inside;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-details ul li {
+    list-style-type: none;
+}
+
+.header-details ul li::before {
+    content: "\2022";
+    padding-right: 10px;
+}
+
+.header-details ul .no-bullet::before {
+    content: "";
+}
+
+.fa-heart {
+    font-size: 13px;
+}
+
+@media screen and (min-width: 760px) {
+    .header-details-bg {
+        display: block;
+    }
+}
+
+/* Navbar CSS for Desktop Devices */
+.navbar {
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .navbar-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar .navbar-links {
+    display: flex;
+    gap: 60px;
+}
+
+.navbar .navbar-links li {
+    list-style-type: none;
+}
+
+.navbar .navbar-links li a {
+    color: var(--text-silver);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.navbar .navbar-icons {
+    display: flex;
+    gap: 30px;
+    color: var(--text-silver);
+    font-size: 14px;
+}
+
+.navbar .navbar-icons > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.navbar .navbar-links li:hover a {
+    color: var(--black);
+}
+
+/* Responsive Navigation Bar CSS */
+.navbar .toggle-btn {
+    display: none;
+}
+
+.toggle-btn .fa-solid {
+    /* Setting Icon font size */
+    font-size: 23px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 140px;
+    width: 300px;
+    height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--bg-grey);
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 320px;
+}
+
+.dropdown-menu .dropdown-links {
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dropdown-menu .dropdown-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--text-silver);
+}
+
+.dropdown-menu .dropdown-icons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--text-silver);
+}
+
+.dropdown-menu .dropdown-icons > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Custom Breakpoint for Navigation Bar */
+@media screen and (max-width: 1110px) {
+    .navbar .navbar-links {
+        display: none;
+    }
+
+    .navbar .navbar-icons {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .navbar .toggle-btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .dropdown-menu {
+        top: 70px;
+        left: 20px;
+        width: unset;
+    }
+    
+    .dropdown-menu .dropdown-icons {
+        justify-content: flex-start;
+    }
+}
+
+/* Hero Section Main CSS */
+.hero-section {
+    display: flex;
+}
+
+.hero-section .hero-main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--cultured);
+}
+
+/* Hero Section Content CSS */
+.hero-main .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-main .main-sub-heading {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.hero-main .main-heading {
+    font-weight: 700;
+    font-size: clamp(43px, 5vw, 68px);
+    font-family: "Playfair Display", serif;
+}
+
+.hero-main .main-price {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hero-main .main-price span {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Hero Section Image CSS */
+.hero-main .hero-img-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Hero Button CSS */
+.hero-main .main-button {
+    position: relative;
+    color: white;
+    background-color: var(--rasin-black);
+    width: 185px;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-button .fa-circle {
+    font-size: 8px;
+}
+
+.main-button .fa-circle.circle-one {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.main-button .fa-circle.circle-two {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Hero Section Left and Right CSS */
+.hero-section .hero-left {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+.hero-left .big-number {
+    position: relative;
+    left: -10px;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    transform: rotate(270deg);
+    transform-origin: center;
+}
+
+.hero-left .sm-number {
+    padding: 5px 10px;
+    transform: rotate(270deg);
+    transform-origin: center;
+    color: white;
+    background: #424242;
+}
+
+.hero-section .hero-right {
+    display: none;
+    width: 130px;
+}
+
+@media screen and (min-width: 760px) {
+    .hero-section .hero-main {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .hero-section {
+        min-height: 80svh;
+    }
+
+    .hero-section .hero-right, .hero-section .hero-left {
+        display: flex;
+    }
+
+    .hero-section .hero-left {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* Features Section CSS */
+.features-section {
+    display: flex;
+}
+
+.features-section .center-div {
+    width: 100%;
+}
+
+/* Left and Right Sections CSS */
+.features-section .left-color {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+.features-section .right-color {
+    display: none;
+    width: 130px;
+}
+
+@media screen and (min-width: 1110px) {
+    .features-section .left-color, .features-section .right-color {
+        display: flex;
+    }
+}
+
+/* Main Section for Features */
+.features-main {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.features-main .features-flex-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.features-main .features-flex-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.features-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--cultured);
+}
+
+.features-flex-1 .f1,.features-flex-1 .f2 {
+    max-height: 510px;
+}
+
+.features-flex-2 .f3, .features-flex-2 .f4 {
+    max-width: 450px;
+    max-height: 240px;
+}
+
+@media screen and (min-width: 660px) {
+    .features-main .features-flex-1 {
+        flex-direction: row;
+    }
+    .features-main .features-flex-2 {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .features-main {
+        flex-direction: row;
+    }
+    .features-main .features-flex-2 {
+        flex-direction: column;
+    }
+    .features-flex-1 .f1 {
+        max-width: 560px;
+    }
+    .features-flex-1 .f2 {
+        max-width: 340px;
+    }
+    .features-flex-2 .f3, .f4 {
+        max-width: 450px;
+    }
+}
