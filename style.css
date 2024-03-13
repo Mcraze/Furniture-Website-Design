@@ -71,6 +71,13 @@
     }
 }
 
+/* header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+} */
+
 /* Navbar CSS for Desktop Devices */
 .navbar {
     padding: 28px;
@@ -550,6 +557,117 @@ background: linear-gradient(41deg, rgba(255,255,255,1) 20%, rgba(252,70,107,0) 5
     }
     .newsletter-section .news-button {
         width: 100%;
+    }
+}
+
+/* Blogs Section */
+.blogs-section {
+    display: flex;
+}
+
+.blogs-section .blog-center {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--bright-gray);
+}
+
+/* Left and Right Sections CSS */
+.blogs-section .blog-left {
+    display: none;
+    width: 130px;
+    background-color: white;
+}
+
+.blogs-section .blog-right {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+@media screen and (min-width: 1110px) {
+    .blogs-section .blog-left, .blogs-section .blog-right {
+        display: block;
+    }
+}
+
+/* Blog Container and Blog card CSS */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.blog-container .blog-card {
+    max-width: 350px;
+    background-color: white;
+}
+
+.blog-container .blog-card img {
+    max-width: 350px;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.blog-container .blog-content {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-card .blog-content .blog-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-card .blog-content .blog-heading h4 {
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.blog-card .blog-heading p {
+    font-size: 12px;
+}
+
+.blog-card .blog-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-card .blog-details p {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.blog-card .blog-details div {
+    font-size: 12px;
+}
+
+.blog-card .blog-details .blog-read-more {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.blog-card .blog-details .blog-dash {
+    width: 40px;
+    height: 2;
+    border: 1px solid var(--rasin-black);
+}
+
+@media screen and (min-width: 800px) {
+    .blog-container {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
