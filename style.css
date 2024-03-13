@@ -498,6 +498,61 @@ background: linear-gradient(41deg, rgba(255,255,255,1) 20%, rgba(252,70,107,0) 5
     cursor: pointer;
 }
 
+/* Newsletter Section CSS */
+.newsletter-section {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.section-heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.section-heading {
+    font-weight: 700;
+    font-size: clamp(30px, 5vw, 46px);
+    font-family: "Playfair Display", serif;
+}
+
+.newsletter-section .news-input {
+    width: 420px;
+    padding: 15px 20px;
+    background-color: var(--cultured);
+    border: none;
+}
+
+.newsletter-section .news-button {
+    padding: 15px 45px;
+    border: none;
+    border-radius: 0px 4px 0px 4px;
+    color: white;
+    cursor: pointer;
+    background-color: var(--rasin-black);
+}
+
+@media screen and (max-width:650px) {
+    .newsletter-email-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .newsletter-section .news-input {
+        width: 100%;
+    }
+    .newsletter-section .news-button {
+        width: 100%;
+    }
+}
+
 /* Our Support CSS */
 .support-section {
     display: flex;
