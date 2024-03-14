@@ -267,7 +267,7 @@
 }
 
 /* Hero Button CSS */
-.hero-main .main-button {
+.main-button {
     position: relative;
     color: white;
     background-color: var(--rasin-black);
