@@ -7,27 +7,30 @@
     <title>Furniture Website</title>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="css/countdown.css" />
+    <link rel="stylesheet" href="css/products.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header and Navigation Bar -->
-    <header>
-        <div class="header-details-bg">
-            <div class="header-details max-container-one">
-                <ul>
-                    <li class="no-bullet"><b>E:</b> adelkarmitesh23@gmail.com</li>
-                    <li><b>P:</b> 9326203875</li>
-                </ul>
-                <ul>
-                    <li class="no-bullet"><i class="fa-regular fa-heart"></i> Wish List</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
+    <!-- Header Details Section -->
+    <div class="header-details-bg">
+        <div class="header-details max-container">
+            <ul>
+                <li class="no-bullet"><b>E:</b> adelkarmitesh23@gmail.com</li>
+                <li><b>P:</b> 9326203875</li>
+            </ul>
+            <ul>
+                <li class="no-bullet"><i class="fa-regular fa-heart"></i> Wish List</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
         </div>
-        <nav class="navbar max-container-one">
+    </div>
+
+    <!-- Sticky Navigation Bar and Header Section -->
+    <header>
+        <nav class="navbar max-container">
             <div class="navbar-title">Dev Furniture Mart</div>
             <ul class="navbar-links">
                 <li><a href="#home">Home</a></li>
@@ -39,18 +42,19 @@
             </ul>
             <div class="navbar-icons">
                 <div>
-                    <img src="assets/search.svg" alt="">
+                    <img src="assets/search.svg" alt="Search" width="20" height="20">
                     <p>Search</p>
                 </div>
                 <div>
-                    <img src="assets/account.svg" alt="">
+                    <img src="assets/account.svg" alt="User" width="20" height="20">
                     <p>Account</p>
                 </div>
                 <div>
-                    <img src="assets/cart.svg" alt="">
+                    <img src="assets/cart.svg" alt="Shopping" width="22" height="22">
                     <p>Cart</p>
                 </div>
             </div>
+            <!-- Mobile Navigation Toggle Button -->
             <div class="toggle-btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -68,15 +72,15 @@
             </ul>
             <div class="dropdown-icons">
                 <div>
-                    <img src="assets/search.svg" alt="">
+                    <img src="assets/search.svg" alt="Search" width="20" height="20">
                     <p>Search</p>
                 </div>
                 <div>
-                    <img src="assets/account.svg" alt="">
+                    <img src="assets/account.svg" alt="User" width="20" height="20">
                     <p>Account</p>
                 </div>
                 <div>
-                    <img src="assets/cart.svg" alt="">
+                    <img src="assets/cart.svg" alt="Shopping" width="22" height="22">
                     <p>Cart</p>
                 </div>
             </div>
@@ -183,16 +187,26 @@
 
         <!-- Product Cards Section -->
         <section class="products-section">
+
+            <div class="filter-container max-container">
+                <button class="filter-btn active" data-filter="all"><div class="triangle"></div>All</button>
+                <button class="filter-btn" data-filter="furniture"><div class="triangle"></div>Furniture</button>
+                <button class="filter-btn" data-filter="lighting"><div class="triangle"></div>Lighting</button>
+                <button class="filter-btn" data-filter="sofas"><div class="triangle"></div>Sofas</button>
+                <button class="filter-btn" data-filter="lounge"><div class="triangle"></div>Lounge Chairs</button>
+            </div>
+
             <div class="products-container">
 
-                <div class="product-card">
+                <div class="product-card furniture">
                     <div>
                         <div class="product-img-container">
                             <div class="product-status new">New</div>
                             <img src="assets/p1.png" alt="Product 1 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -213,14 +227,15 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card lighting">
                     <div>
                         <div class="product-img-container">
                             <div class="product-status hot">Hot</div>
                             <img src="assets/p2.png" alt="Product 2 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -241,14 +256,15 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card lounge">
                     <div>
                         <div class="product-img-container">
                             <div class="product-status sale">Sale</div>
                             <img src="assets/p3.png" alt="Product 3 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -269,13 +285,14 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card sofas">
                     <div>
                         <div class="product-img-container">
                             <img src="assets/p4.png" alt="Product 4 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -296,14 +313,15 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card furniture">
                     <div>
                         <div class="product-img-container">
                             <div class="product-status new">New</div>
                             <img src="assets/p1.png" alt="Product 1 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -324,14 +342,15 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card lighting">
                     <div>
                         <div class="product-img-container">
                             <div class="product-status hot">Hot</div>
                             <img src="assets/p2.png" alt="Product 2 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -352,14 +371,15 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card lounge">
                     <div>
                         <div class="product-img-container">
                             <div class="product-status sale">Sale</div>
                             <img src="assets/p3.png" alt="Product 3 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -380,13 +400,14 @@
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card sofas">
                     <div>
                         <div class="product-img-container">
                             <img src="assets/p4.png" alt="Product 4 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -418,6 +439,345 @@
             </div>
         </section>
 
+        <!-- 30 Percent off Section -->
+        <section class="offer-section">
+            <div class="offer-container">
+
+                <div class="offer-details">
+                    <div>
+                        <h2>30% off</h2>
+                        <p>Midcentury Modern Occasional Chair</p>
+                    </div>
+                    <div>
+                        <button class="main-button">
+                            <i class="fa-regular fa-circle circle-one"></i>
+                            <div>Shop Now</div>
+                            <i class="fa-regular fa-circle circle-two"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="offer-img-container">
+                    <div class="offer-price">
+                        <div class="offer-dash"></div>only $309.99
+                    </div>
+                    <img src="assets/30-percent-off.png" alt="Sofa Chair Image" width="570" height="563">
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Products sets Section -->
+        <section class="sets-section">
+            <div class="sets-left"></div>
+            <div class="sets-center">
+                <div class="sets-container max-container">
+
+                    <div class="product-set">
+                        <div class="product-set-heading">
+                            <div class="p-s-heading">Best Seller</div>
+                            <div class="product-set-btn-container">
+                                <button><img src="assets/back-icon.svg" alt="Back"> Back</button>
+                                <div>|</div>
+                                <button>Next <img src="assets/next-icon.svg" alt="Next"></button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="product-set-icons">
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny1.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Petite Table Lamp</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny2.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Original Outdoor Beanbag</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny3.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Wingback Chair</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-set">
+                        <div class="product-set-heading">
+                            <div class="p-s-heading">New Arrival</div>
+                            <div class="product-set-btn-container">
+                                <button><img src="assets/back-icon.svg" alt="Back"> Back</button>
+                                <div>|</div>
+                                <button>Next <img src="assets/next-icon.svg" alt="Next"></button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="product-set-icons">
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny4.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Madra Log Holder</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny5.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Carronade Large Lamp</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny6.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Cushion Set 3 Pieces</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="product-set desktop-only">
+                        <div class="product-set-heading">
+                            <div class="p-s-heading">Featured</div>
+                            <div class="product-set-btn-container">
+                                <button><img src="assets/back-icon.svg" alt="Back"> Back</button>
+                                <div>|</div>
+                                <button>Next <img src="assets/next-icon.svg" alt="Next"></button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="product-set-icons">
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny7.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Garden Armchair</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny8.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>2 - Seater</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <div><img src="assets/tiny1.png" alt="Small Lamp"></div>
+                                </div>
+                                <div class="product-set-details">
+                                    <div>
+                                        <h6>Petite Table Lamp</h6>
+                                        <p>$19.00 <s>$21.00</s></p>
+                                    </div>
+                                    <button class="product-button">
+                                        <i class="fa-regular fa-circle circle-one"></i>
+                                        <div class="button-text">View All</div>
+                                        <i class="fa-regular fa-circle circle-two"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sets-right"></div>
+        </section>
+
+        <!-- Special Deals - Sales Section -->
+        <section class="special-section">
+            <div class="sale-btn-container">
+                <button><img src="assets/back-icon.svg" alt="Back"> Back</button>
+                <div>|</div>
+                <button>Next <img src="assets/next-icon.svg" alt="Next"></button>
+            </div>
+            <div class="sales-container max-container">
+
+                <div class="sales-card">
+                    <div class="sales-details">
+                        <p>New Year Special</p>
+                        <h4>Big Sale 50% Off</h4>
+                        <button class="product-button">
+                            <i class="fa-regular fa-circle circle-one"></i>
+                            <div class="button-text">View All</div>
+                            <i class="fa-regular fa-circle circle-two"></i>
+                        </button>
+                    </div>
+                    <img src="assets/sale1.png" alt="Sale 1 Image" width="530" height="350">
+                </div>
+
+                <div class="sales-card">
+                    <div class="sales-details">
+                        <p>#New Arrivals</p>
+                        <h4>Suitable Wood Tool</h4>
+                        <button class="product-button">
+                            <i class="fa-regular fa-circle circle-one"></i>
+                            <div class="button-text">View All</div>
+                            <i class="fa-regular fa-circle circle-two"></i>
+                        </button>
+                    </div>
+                    <img src="assets/sale2.png" alt="Sale 1 Image" width="530" height="350">
+                </div>
+
+                <div class="sales-card">
+                    <div class="sales-details">
+                        <p>#Hot Collections</p>
+                        <h4>Wood Rubber Chair</h4>
+                        <button class="product-button">
+                            <i class="fa-regular fa-circle circle-one"></i>
+                            <div class="button-text">View All</div>
+                            <i class="fa-regular fa-circle circle-two"></i>
+                        </button>
+                    </div>
+                    <img src="assets/sale3.png" alt="Sale 1 Image" width="530" height="350">
+                </div>
+            </div>
+        </section>
+
+        <!-- Deal of the Day Section -->
+        <section class="countdown-section">
+            <div class="countdown-left"></div>
+            <div class="countdown-center">
+
+                <div class="countdown-container">
+
+                    <div class="countdown-details">
+                        <div class="countdown-title">
+                            <p>Limited Quantities</p>
+                            <h3>Deal of the Day</h3>
+                        </div>
+                        <div class="countdown-price">
+                            <p>Original Outdoor Beanbag</p>
+                            <div>$149.00 <span>$250.00</span></div>
+                        </div>
+
+                        <div class="clock-container">
+                            <div class="clock-time">
+                                <h4 id="hours">09</h4>
+                                <p>Hrs</p>
+                            </div>
+                            <div>:</div>
+                            <div class="clock-time">
+                                <h4 id="minutes">09</h4>
+                                <p>Mins</p>
+                            </div>
+                            <div>:</div>
+                            <div class="clock-time">
+                                <h4 id="seconds">09</h4>
+                                <p>Sec</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="main-button">
+                                <i class="fa-regular fa-circle circle-one"></i>
+                                <div>Buy Now</div>
+                                <i class="fa-regular fa-circle circle-two"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="countdown-image-container">
+                        <img src="assets/timer-image.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="countdown-right"></div>
+        </section>
+
         <!-- Decorations Section -->
         <section class="decoration-section">
             <div class="da-container">
@@ -425,7 +785,8 @@
                 <div class="da-description">
                     <h3>Decoration</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
                     </p>
                     <div>
                         <button class="product-button">
@@ -443,7 +804,8 @@
                             <img src="assets/p1.png" alt="Product 1 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -471,7 +833,8 @@
                             <img src="assets/p2.png" alt="Product 2 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -499,7 +862,8 @@
                             <img src="assets/p3.png" alt="Product 3 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -534,7 +898,8 @@
                             <img src="assets/p1.png" alt="Product 1 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -562,7 +927,8 @@
                             <img src="assets/p2.png" alt="Product 2 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -590,7 +956,8 @@
                             <img src="assets/p3.png" alt="Product 3 Image" width="350" height="310">
                         </div>
                         <div class="product-buttons">
-                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp; ADD TO CART</button>
+                            <button class="product-cart-btn"><img src="assets/cart-button.svg" alt="Cart logo">&nbsp;
+                                ADD TO CART</button>
                             <button><img src="assets/search.svg" alt="Search" width="12" height="12"></button>
                             <button><img src="assets/heart-button.svg" alt="Like" width="12" height="12"></button>
                             <button><img src="assets/switch-button.svg" alt="Switch" width="12" height="12"></button>
@@ -614,7 +981,8 @@
                 <div class="da-description">
                     <h3>Architect</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
                     </p>
                     <div>
                         <button class="product-button">
@@ -646,7 +1014,8 @@
             <div class="blog-center">
                 <div class="section-heading-container">
                     <h2 class="section-heading">Our Blogs</h2>
-                    <p>Find a bright ideal to suit your taste with our great selection of suspension, wall, ﬂoor and table lights.</p>
+                    <p>Find a bright ideal to suit your taste with our great selection of suspension, wall, ﬂoor and
+                        table lights.</p>
                 </div>
                 <div class="blog-container">
 
@@ -654,14 +1023,18 @@
                         <div><img src="assets/blog1.png" alt="Blog post 1"></div>
                         <div class="blog-content">
                             <div class="blog-heading">
-                                <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</h4>
+                                <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
+                                </h4>
                                 <p>Funiture, Other / September 11, 2018</p>
                             </div>
                             <div class="blog-details">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt
                                 </p>
-                                <div class="blog-read-more"><div class="blog-dash"></div>Read More</div>
+                                <div class="blog-read-more">
+                                    <div class="blog-dash"></div>Read More
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -670,14 +1043,18 @@
                         <div><img src="assets/blog2.png" alt="Blog post 2"></div>
                         <div class="blog-content">
                             <div class="blog-heading">
-                                <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</h4>
+                                <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
+                                </h4>
                                 <p>Funiture, Other / September 11, 2018</p>
                             </div>
                             <div class="blog-details">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt
                                 </p>
-                                <div class="blog-read-more"><div class="blog-dash"></div>Read More</div>
+                                <div class="blog-read-more">
+                                    <div class="blog-dash"></div>Read More
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -686,14 +1063,18 @@
                         <div><img src="assets/blog3.png" alt="Blog post 3"></div>
                         <div class="blog-content">
                             <div class="blog-heading">
-                                <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</h4>
+                                <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
+                                </h4>
                                 <p>Funiture, Other / September 11, 2018</p>
                             </div>
                             <div class="blog-details">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt
                                 </p>
-                                <div class="blog-read-more"><div class="blog-dash"></div>Read More</div>
+                                <div class="blog-read-more">
+                                    <div class="blog-dash"></div>Read More
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -743,12 +1124,12 @@
 
         <!-- Brands Section -->
         <section class="brands-section">
-            <div class="brands-container">
-                <img src="assets/brand1.png" alt="Slogan">
-                <img src="assets/brand2.png" alt="Retro">
-                <img src="assets/brand3.png" alt="Creatives">
-                <img src="assets/brand4.png" alt="Vintage Spoon">
-                <img src="assets/brand5.png" alt="Vintage">
+            <div class="brands-container max-container">
+                <img src="assets/brand1.png" alt="Slogan" width="130" height="130">
+                <img src="assets/brand2.png" alt="Retro" width="130" height="130">
+                <img src="assets/brand3.png" alt="Creatives" width="130" height="130">
+                <img src="assets/brand4.png" alt="Vintage Spoon" width="130" height="130">
+                <img src="assets/brand5.png" alt="Vintage" width="130" height="130">
             </div>
         </section>
 
@@ -756,7 +1137,7 @@
 
     <!-- Footer and Copyright -->
     <footer>
-        <div class="footer-main">
+        <div class="footer-main max-container">
             <div class="footer-info">
                 <div class="footer-heading">Dev Furniture Mart</div>
                 <p>
@@ -813,6 +1194,8 @@
     </footer>
 
     <script src="navbar.js"></script>
+    <script src="filter.js"></script>
+    <script src="timer.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,123 @@
+.countdown-section {
+    display: flex;
+}
+
+.countdown-section .countdown-center {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: var(--cultured);
+}
+
+/* Left and Right Sections CSS */
+.countdown-section .countdown-left {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+.countdown-section .countdown-right {
+    display: none;
+    width: 130px;
+    background-color: var(--cultured);
+}
+
+@media screen and (min-width: 1110px) {
+    .countdown-section .countdown-left, .countdown-section .countdown-right {
+        display: block;
+    }
+}
+
+.countdown-container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    background-color: white;
+}
+
+@media screen and (max-width: 720px) {
+    .countdown-container {
+        flex-direction: column;
+    }
+}
+
+.countdown-container .countdown-image-container {
+    max-width: 570px;
+    height: 450px;
+}
+
+.countdown-container .countdown-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--bright-gray);
+}
+
+.countdown-container .countdown-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.countdown-container .countdown-details .countdown-title p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-silver);
+}
+
+.countdown-container .countdown-details .countdown-title h3 {
+    font-family: "Playfair display", serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.countdown-container .countdown-details .countdown-price p {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-silver);
+}
+
+.countdown-container .countdown-details .countdown-price div {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.countdown-container .countdown-details .countdown-price span {
+    font-size: 22px;
+    text-decoration: line-through;
+}
+
+.countdown-container .countdown-details .clock-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.countdown-container .countdown-details .clock-container .clock-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid var(--rasin-black);
+}
+
+.countdown-container .countdown-details .clock-container div {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.countdown-container .countdown-details .clock-container .clock-time h4 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.countdown-container .countdown-details .clock-container .clock-time p {
+    font-size: 14px;
+    font-weight: 400;
+}
