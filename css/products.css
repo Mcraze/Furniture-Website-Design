@@ -3,6 +3,49 @@
     background-color: var(--bright-gray);
 }
 
+/* Product Filter Button CSS */
+.products-section .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.filter-btn {
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-silver);
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.filter-btn .triangle {
+    display: none;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: var(--rasin-black);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.filter-btn.active {
+    color: white;
+    background-color: var(--rasin-black);
+}
+
+.filter-btn.active .triangle {
+    display: block;
+}
+
+/* Products Section Start */
 .products-container {
     margin: 0 auto;
     max-width: 1450px;
@@ -15,10 +58,14 @@
 }
 
 .product-card {
+    display: none;
     max-width: 330px;
-    display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.product-card.show {
+    display: flex;
 }
 
 .product-card .product-img-container {
