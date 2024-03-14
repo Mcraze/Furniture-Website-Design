@@ -9,7 +9,6 @@
 
 :root {
     --black: #000;
-    --bg-grey: #EEEEEE;
     --text-silver: #757575;
     --cultured: #F5F5F5;
     --bright-gray: #EEEEEE;
@@ -17,20 +16,15 @@
     font-family: "Roboto", sans-serif;
 }
 
-.max-container-one {
+.max-container {
     margin: 0 auto;
     max-width: 1400px;
 }
 
-.max-container-two {
-    margin: 0 auto;
-    max-width: 1500px;
-}
-
-/* Header Details CSS */
+/* Header Details CSS Start */
 .header-details-bg {
     display: none;
-    background-color: var(--bg-grey);
+    background-color: var(--bright-gray);
 }
 
 .header-details {
@@ -65,20 +59,21 @@
     font-size: 13px;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 768px) {
     .header-details-bg {
         display: block;
     }
 }
+/* Header Details CSS End */
 
-/* header {
+/* Header and Navigation Bar CSS Start */
+header {
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: white;
-} */
+}
 
-/* Navbar CSS for Desktop Devices */
 .navbar {
     padding: 28px;
     display: flex;
@@ -126,16 +121,16 @@
     color: var(--black);
 }
 
-/* Responsive Navigation Bar CSS */
 .navbar .toggle-btn {
     display: none;
 }
 
 .toggle-btn .fa-solid {
-    /* Setting Icon font size */
     font-size: 23px;
 }
+/* Header and Navigation Bar CSS End */
 
+/* Dropdown Menu CSS Start */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -145,7 +140,7 @@
     height: 0;
     border-radius: 10px;
     overflow: hidden;
-    background-color: var(--bg-grey);
+    background-color: var(--bright-gray);
     transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -183,8 +178,9 @@
     align-items: center;
     gap: 5px;
 }
+/* Dropdown Menu CSS End */
 
-/* Custom Breakpoint for Navigation Bar */
+/* Custom Breakpoint for Navigation Bar Responsiveness */
 @media screen and (max-width: 1110px) {
     .navbar .navbar-links {
         display: none;
@@ -203,7 +199,8 @@
     }
 }
 
-@media screen and (max-width: 760px) {
+/* For Smaller Devices - Mobile and Tablets */
+@media screen and (max-width: 768px) {
     .dropdown-menu {
         top: 70px;
         left: 20px;
@@ -215,7 +212,7 @@
     }
 }
 
-/* Hero Section Main CSS */
+/* Website Hero Section CSS Start */
 .hero-section {
     display: flex;
 }
@@ -266,7 +263,7 @@
     height: auto;
 }
 
-/* Hero Button CSS */
+/* Main Button CSS for Hero Section and Other Sections */
 .main-button {
     position: relative;
     color: white;
@@ -280,6 +277,7 @@
     gap: 10px;
     font-size: 16px;
     cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .main-button .fa-circle {
@@ -298,7 +296,16 @@
     right: 10px;
 }
 
-/* Hero Section Left and Right CSS */
+.main-button:hover {
+    transform: scale(1.05);
+}
+
+.main-button:hover .fa-circle {
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Hero Section Left and Right Parts CSS */
 .hero-section .hero-left {
     display: none;
     width: 130px;
@@ -328,12 +335,14 @@
     width: 130px;
 }
 
-@media screen and (min-width: 760px) {
+/* For Bigger Screens than Tablets */
+@media screen and (min-width: 768px) {
     .hero-section .hero-main {
         flex-direction: row;
     }
 }
 
+/* Custom Breakpoint for Hero Section Side Parts */
 @media screen and (min-width: 1110px) {
     .hero-section {
         min-height: 80svh;
@@ -352,8 +361,9 @@
         gap: 20px;
     }
 }
+/* Website Hero Section CSS End */
 
-/* Features Section CSS */
+/* Features Section CSS Start */
 .features-section {
     display: flex;
 }
@@ -362,7 +372,6 @@
     width: 100%;
 }
 
-/* Left and Right Sections CSS */
 .features-section .left-color {
     display: none;
     width: 130px;
@@ -374,15 +383,14 @@
     width: 130px;
 }
 
+/* Custom Breakpoint According to Navbar */
 @media screen and (min-width: 1110px) {
-
     .features-section .left-color,
     .features-section .right-color {
         display: flex;
     }
 }
 
-/* Main Section for Features */
 .features-main {
     width: 100%;
     max-width: 1300px;
@@ -409,7 +417,7 @@
     position: relative;
     max-width: 560px;
     max-height: 510px;
-    box-shadow: 0 0 1px var(--text-silver);
+    box-shadow: 0 0 2px #00000041;
 }
 
 .features-main .features-flex-1 .f2 {
@@ -426,10 +434,11 @@
     position: relative;
     max-width: 450px;
     max-height: 240px;
-    box-shadow: 0 0 1px var(--text-silver);
+    box-shadow: 0 0 2px #00000041;
 }
 
-@media screen and (max-width: 760px) {
+/* For Large Tablet Screen Devices */
+@media screen and (max-width: 992px) {
     .features-main {
         flex-direction: column;
     }
@@ -443,7 +452,8 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+/* Breakpoint for Mobile and Smaller Tablets */
+@media screen and (max-width: 576px) {
     .features-main .features-flex-1 {
         flex-wrap: wrap;
     }
@@ -461,8 +471,7 @@
     }
 }
 
-/* Features content CSS */
-
+/* Features inner card Content CSS */
 .features-main .f-details {
     position: absolute;
     padding: 20px;
@@ -495,7 +504,7 @@
     font-size: 20px;
 }
 
-/* Function Button CSS */
+/* Features Button CSS */
 .f-details .f-btn-container {
     margin-left: 5px;
     border: 1px solid black;
@@ -512,8 +521,9 @@
     transform: translate(0);
     cursor: pointer;
 }
+/* Features Section CSS End */
 
-/* Offer Section */
+/* Offer Section CSS Start - 30% off Chair Section */
 .offer-section {
     padding: 20px 30px 0;
 }
@@ -521,45 +531,45 @@
 .offer-section .offer-container {
     position: relative;
     top: 100px;
-    max-width: 1320px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
     gap: 50px;
 }
 
-.offer-section .offer-container .offer-details {
+.offer-container .offer-details {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     gap: 70px;
 }
 
-.offer-section .offer-container .offer-details h2 {
+.offer-container .offer-details h2 {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     line-height: 120px;
     font-size: clamp(60px, 5vw, 90px);
 }
 
-.offer-section .offer-container .offer-details p {
+.offer-container .offer-details p {
     font-size: 20px;
     font-weight: 400;
     line-height: 23px;
 }
 
-.offer-section .offer-container .offer-img-container {
+.offer-container .offer-img-container {
     position: relative;
     flex-grow: 1;
 }
 
-.offer-section .offer-container .offer-img-container img {
+.offer-container .offer-img-container img {
     width: 100%;
     height: auto;
     max-width: 570px;
 }
 
-.offer-section .offer-container .offer-img-container .offer-price {
+.offer-container .offer-img-container .offer-price {
     position: absolute;
     right: 0;
     font-size: 24px;
@@ -569,12 +579,13 @@
     gap: 20px;
 }
 
-.offer-section .offer-container .offer-img-container .offer-price .offer-dash {
+.offer-img-container .offer-price .offer-dash {
     width: 150px;
     height: 1px;
     border: 1px solid var(--rasin-black);
 }
 
+/* Custom Breakpoint */
 @media screen and (max-width: 1110px) {
     .offer-section {
         padding: 0px 30px 0;
@@ -585,12 +596,12 @@
         top: 70px;
     }
 
-    .offer-section .offer-container .offer-img-container .offer-price .offer-dash {
+    .offer-img-container .offer-price .offer-dash {
         width: 70px;
     }
 }
 
-/* Additional Products section */
+/* Additional Products Section CSS - Below Offer Section */
 .sets-section {
     display: flex;
 }
@@ -615,7 +626,6 @@
 }
 
 @media screen and (min-width: 1110px) {
-
     .sets-section .sets-left,
     .sets-section .sets-right {
         display: block;
@@ -623,8 +633,6 @@
 }
 
 .sets-section .sets-container {
-    max-width: 1400px;
-    margin: 0 auto;
     padding-top: 40px;
     display: flex;
     gap: 30px;
@@ -645,13 +653,13 @@
     font-weight: 500;
 }
 
-.product-set .product-set-heading .product-set-btn-container {
+.product-set-heading .product-set-btn-container {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.product-set .product-set-heading .product-set-btn-container button {
+.product-set-heading .product-set-btn-container button {
     background: transparent;
     border: none;
     display: flex;
@@ -660,6 +668,12 @@
     color: var(--text-silver);
     gap: 10px;
     font-family: "Roboto", sans-serif;
+    transition: transform 0.2s;
+}
+
+.product-set-btn-container button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .product-set hr {
@@ -705,7 +719,8 @@
     padding-bottom: 10px;
 }
 
-@media screen and (max-width:1110px) {
+/* Custom Breakpoint because of content breakage */
+@media screen and (max-width:1320px) {
     .sets-container {
         flex-wrap: wrap;
         justify-content: center;
@@ -716,13 +731,14 @@
     }
 }
 
-@media screen and (max-width:670px) {
+@media screen and (max-width:576px) {
     .sets-container .product-set.desktop-only {
         display: block;
     }
 }
+/* Offer Section CSS End */
 
-/* Special Sales section */
+/* Special Deals Section CSS Start */
 .special-section {
     padding: 50px 20px;
 }
@@ -746,11 +762,15 @@
     color: var(--text-silver);
     gap: 10px;
     font-family: "Roboto", sans-serif;
+    transition: transform 0.2s;
+}
+
+.special-section .sale-btn-container button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .special-section .sales-container {
-    max-width: 1400px;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -763,7 +783,7 @@
     height: 300px;
 }
 
-.special-section .sales-container .sales-card .sales-details {
+.sales-container .sales-card .sales-details {
     position: absolute;
     padding: 20px;
     height: 100%;
@@ -772,13 +792,13 @@
     background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(255,255,255,0) 100%);
 }
 
-.special-section .sales-container .sales-card .sales-details p {
+.sales-container .sales-card .sales-details p {
     font-size: 20px;
     font-weight: 500;
     line-height: 23px;
 }
 
-.special-section .sales-container .sales-card .sales-details h4 {
+.sales-container .sales-card .sales-details h4 {
     font-family: "Playfair Display", serif;
     font-size: 35px;
     font-weight: 700;
@@ -798,8 +818,9 @@
         flex-wrap: wrap;
     }
 }
+/* Special Deals Section CSS End */
 
-/* Decoration and Architect Section CSS */
+/* Decoration and Architect Section CSS Start */
 .decoration-section {
     padding: 100px 20px;
     background-color: var(--bright-gray);
@@ -841,8 +862,8 @@
     line-height: 25px;
 }
 
-@media screen and (max-width:600px) {
-
+/* Reducing Padding for Smaller devices */
+@media screen and (max-width:576px) {
     .decoration-section,
     .architect-section {
         padding: 50px 20px;
@@ -852,8 +873,9 @@
         padding-top: 0;
     }
 }
+/* Decoration and Architect Section CSS End */
 
-/* Newsletter Section CSS */
+/* Newsletter Section CSS Start */
 .newsletter-section {
     padding: 100px 20px;
     display: flex;
@@ -894,7 +916,7 @@
     background-color: var(--rasin-black);
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:576px) {
     .newsletter-email-section {
         display: flex;
         flex-wrap: wrap;
@@ -909,8 +931,9 @@
         width: 100%;
     }
 }
+/* Decoration and Architect Section CSS End */
 
-/* Blogs Section */
+/* Blogs Section CSS Start*/
 .blogs-section {
     display: flex;
 }
@@ -924,7 +947,7 @@
     background-color: var(--bright-gray);
 }
 
-/* Left and Right Sections CSS */
+/* Left and Right Sections CSS for Blogs */
 .blogs-section .blog-left {
     display: none;
     width: 130px;
@@ -948,7 +971,7 @@
 /* Blog Container and Blog card CSS */
 .blog-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -1016,14 +1039,16 @@
     border: 1px solid var(--rasin-black);
 }
 
-@media screen and (min-width: 800px) {
+/* Blogs as Columns on Smaller Screen devices */
+@media screen and (max-width: 768px) {
     .blog-container {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 }
+/* Blogs Section CSS Ends */
 
-/* Our Support CSS */
+/* Our Support CSS Start */
 .support-section {
     display: flex;
 }
@@ -1045,7 +1070,6 @@
 }
 
 @media screen and (min-width: 1110px) {
-
     .support-section .s-left,
     .support-section .s-right {
         display: block;
@@ -1085,34 +1109,41 @@
     font-weight: 700;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:576px) {
     .support-container {
         flex-direction: column;
     }
+    .support-container .s-item img {
+        width: 50px;
+        height: 50px;
+    }
 }
+/* Our Support Section CSS End */
 
-/* Brands CSS */
+/* Brands Section CSS Start */
 .brands-section {
     padding: 100px 20px;
     background-color: var(--bright-gray);
 }
 
 .brands-container {
-    max-width: 1410px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
-@media screen and (max-width:950px) {
+.brands-container img {
+    object-fit: cover;
+}
+
+@media screen and (max-width:992px) {
     .brands-container {
         flex-wrap: wrap;
         justify-content: center;
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:576px) {
     .brands-section {
         padding: 50px 20px;
     }
@@ -1126,16 +1157,14 @@
         height: 100px;
     }
 }
+/* Brands Section CSS End */
 
-/* Footer CSS */
-
+/* Footer CSS Start */
 footer {
     padding: 100px 20px 20px;
 }
 
 .footer-main {
-    max-width: 1440px;
-    margin: 0 auto;
     padding-bottom: 100px;
     display: flex;
     gap: 100px;
@@ -1178,7 +1207,15 @@ footer {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+}
+
+.footer-main .footer-links-container li {
+    transition: transform 0.1s;
+}
+
+.footer-main .footer-links-container li:hover {
+    transform: translateX(10px);
 }
 
 .footer-main .footer-links-container ul a {
@@ -1219,8 +1256,9 @@ footer .copyright-container>div {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
     .footer-main .footer-links-container>div {
         width: 100%;
     }
 }
+/* Footer CSS End */

@@ -82,6 +82,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product-card .product-buttons button:hover {
+    transform: translateY(-5px);
 }
 
 .product-card .product-details {

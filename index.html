@@ -7,28 +7,30 @@
     <title>Furniture Website</title>
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="products.css" />
-    <link rel="stylesheet" href="countdown.css" />
+    <link rel="stylesheet" href="css/countdown.css" />
+    <link rel="stylesheet" href="css/products.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header and Navigation Bar -->
-    <header>
-        <div class="header-details-bg">
-            <div class="header-details max-container-one">
-                <ul>
-                    <li class="no-bullet"><b>E:</b> adelkarmitesh23@gmail.com</li>
-                    <li><b>P:</b> 9326203875</li>
-                </ul>
-                <ul>
-                    <li class="no-bullet"><i class="fa-regular fa-heart"></i> Wish List</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
+    <!-- Header Details Section -->
+    <div class="header-details-bg">
+        <div class="header-details max-container">
+            <ul>
+                <li class="no-bullet"><b>E:</b> adelkarmitesh23@gmail.com</li>
+                <li><b>P:</b> 9326203875</li>
+            </ul>
+            <ul>
+                <li class="no-bullet"><i class="fa-regular fa-heart"></i> Wish List</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
         </div>
-        <nav class="navbar max-container-one">
+    </div>
+
+    <!-- Sticky Navigation Bar and Header Section -->
+    <header>
+        <nav class="navbar max-container">
             <div class="navbar-title">Dev Furniture Mart</div>
             <ul class="navbar-links">
                 <li><a href="#home">Home</a></li>
@@ -40,18 +42,19 @@
             </ul>
             <div class="navbar-icons">
                 <div>
-                    <img src="assets/search.svg" alt="">
+                    <img src="assets/search.svg" alt="Search" width="20" height="20">
                     <p>Search</p>
                 </div>
                 <div>
-                    <img src="assets/account.svg" alt="">
+                    <img src="assets/account.svg" alt="User" width="20" height="20">
                     <p>Account</p>
                 </div>
                 <div>
-                    <img src="assets/cart.svg" alt="">
+                    <img src="assets/cart.svg" alt="Shopping" width="22" height="22">
                     <p>Cart</p>
                 </div>
             </div>
+            <!-- Mobile Navigation Toggle Button -->
             <div class="toggle-btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -69,15 +72,15 @@
             </ul>
             <div class="dropdown-icons">
                 <div>
-                    <img src="assets/search.svg" alt="">
+                    <img src="assets/search.svg" alt="Search" width="20" height="20">
                     <p>Search</p>
                 </div>
                 <div>
-                    <img src="assets/account.svg" alt="">
+                    <img src="assets/account.svg" alt="User" width="20" height="20">
                     <p>Account</p>
                 </div>
                 <div>
-                    <img src="assets/cart.svg" alt="">
+                    <img src="assets/cart.svg" alt="Shopping" width="22" height="22">
                     <p>Cart</p>
                 </div>
             </div>
@@ -458,7 +461,7 @@
         <section class="sets-section">
             <div class="sets-left"></div>
             <div class="sets-center">
-                <div class="sets-container">
+                <div class="sets-container max-container">
 
                     <div class="product-set">
                         <div class="product-set-heading">
@@ -537,7 +540,7 @@
                         </div>
                         <hr>
                         <div class="product-set-icons">
-                            
+
                             <div>
                                 <div>
                                     <div><img src="assets/tiny4.png" alt="Small Lamp"></div>
@@ -603,7 +606,7 @@
                         </div>
                         <hr>
                         <div class="product-set-icons">
-                            
+
                             <div>
                                 <div>
                                     <div><img src="assets/tiny7.png" alt="Small Lamp"></div>
@@ -663,54 +666,54 @@
             <div class="sets-right"></div>
         </section>
 
-        <!-- Special Sales Section -->
+        <!-- Special Deals - Sales Section -->
         <section class="special-section">
-                <div class="sale-btn-container">
-                    <button><img src="assets/back-icon.svg" alt="Back"> Back</button>
-                    <div>|</div>
-                    <button>Next <img src="assets/next-icon.svg" alt="Next"></button>
+            <div class="sale-btn-container">
+                <button><img src="assets/back-icon.svg" alt="Back"> Back</button>
+                <div>|</div>
+                <button>Next <img src="assets/next-icon.svg" alt="Next"></button>
+            </div>
+            <div class="sales-container max-container">
+
+                <div class="sales-card">
+                    <div class="sales-details">
+                        <p>New Year Special</p>
+                        <h4>Big Sale 50% Off</h4>
+                        <button class="product-button">
+                            <i class="fa-regular fa-circle circle-one"></i>
+                            <div class="button-text">View All</div>
+                            <i class="fa-regular fa-circle circle-two"></i>
+                        </button>
+                    </div>
+                    <img src="assets/sale1.png" alt="Sale 1 Image" width="530" height="350">
                 </div>
-                <div class="sales-container">
 
-                    <div class="sales-card">
-                        <div class="sales-details">
-                            <p>New Year Special</p>
-                            <h4>Big Sale 50% Off</h4>
-                            <button class="product-button">
-                                <i class="fa-regular fa-circle circle-one"></i>
-                                <div class="button-text">View All</div>
-                                <i class="fa-regular fa-circle circle-two"></i>
-                            </button>
-                        </div>
-                        <img src="assets/sale1.png" alt="Sale 1 Image" width="530" height="350">
+                <div class="sales-card">
+                    <div class="sales-details">
+                        <p>#New Arrivals</p>
+                        <h4>Suitable Wood Tool</h4>
+                        <button class="product-button">
+                            <i class="fa-regular fa-circle circle-one"></i>
+                            <div class="button-text">View All</div>
+                            <i class="fa-regular fa-circle circle-two"></i>
+                        </button>
                     </div>
-
-                    <div class="sales-card">
-                        <div class="sales-details">
-                            <p>#New Arrivals</p>
-                            <h4>Suitable Wood Tool</h4>
-                            <button class="product-button">
-                                <i class="fa-regular fa-circle circle-one"></i>
-                                <div class="button-text">View All</div>
-                                <i class="fa-regular fa-circle circle-two"></i>
-                            </button>
-                        </div>
-                        <img src="assets/sale2.png" alt="Sale 1 Image" width="530" height="350">
-                    </div>
-
-                    <div class="sales-card">
-                        <div class="sales-details">
-                            <p>#Hot Collections</p>
-                            <h4>Wood Rubber Chair</h4>
-                            <button class="product-button">
-                                <i class="fa-regular fa-circle circle-one"></i>
-                                <div class="button-text">View All</div>
-                                <i class="fa-regular fa-circle circle-two"></i>
-                            </button>
-                        </div>
-                        <img src="assets/sale3.png" alt="Sale 1 Image" width="530" height="350">
-                    </div>
+                    <img src="assets/sale2.png" alt="Sale 1 Image" width="530" height="350">
                 </div>
+
+                <div class="sales-card">
+                    <div class="sales-details">
+                        <p>#Hot Collections</p>
+                        <h4>Wood Rubber Chair</h4>
+                        <button class="product-button">
+                            <i class="fa-regular fa-circle circle-one"></i>
+                            <div class="button-text">View All</div>
+                            <i class="fa-regular fa-circle circle-two"></i>
+                        </button>
+                    </div>
+                    <img src="assets/sale3.png" alt="Sale 1 Image" width="530" height="350">
+                </div>
+            </div>
         </section>
 
         <!-- Deal of the Day Section -->
@@ -1112,12 +1115,12 @@
 
         <!-- Brands Section -->
         <section class="brands-section">
-            <div class="brands-container">
-                <img src="assets/brand1.png" alt="Slogan">
-                <img src="assets/brand2.png" alt="Retro">
-                <img src="assets/brand3.png" alt="Creatives">
-                <img src="assets/brand4.png" alt="Vintage Spoon">
-                <img src="assets/brand5.png" alt="Vintage">
+            <div class="brands-container max-container">
+                <img src="assets/brand1.png" alt="Slogan" width="130" height="130">
+                <img src="assets/brand2.png" alt="Retro" width="130" height="130">
+                <img src="assets/brand3.png" alt="Creatives" width="130" height="130">
+                <img src="assets/brand4.png" alt="Vintage Spoon" width="130" height="130">
+                <img src="assets/brand5.png" alt="Vintage" width="130" height="130">
             </div>
         </section>
 
@@ -1125,7 +1128,7 @@
 
     <!-- Footer and Copyright -->
     <footer>
-        <div class="footer-main">
+        <div class="footer-main max-container">
             <div class="footer-info">
                 <div class="footer-heading">Dev Furniture Mart</div>
                 <p>
