@@ -16,6 +16,24 @@
     font-family: "Roboto", sans-serif;
 }
 
+/* Custom Scrollbar CSS Start */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-silver);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+/* Custom Scrollbar CSS End */
+
 .max-container {
     margin: 0 auto;
     max-width: 1400px;
@@ -64,6 +82,7 @@
         display: block;
     }
 }
+
 /* Header Details CSS End */
 
 /* Header and Navigation Bar CSS Start */
@@ -128,6 +147,7 @@ header {
 .toggle-btn .fa-solid {
     font-size: 23px;
 }
+
 /* Header and Navigation Bar CSS End */
 
 /* Dropdown Menu CSS Start */
@@ -178,6 +198,7 @@ header {
     align-items: center;
     gap: 5px;
 }
+
 /* Dropdown Menu CSS End */
 
 /* Custom Breakpoint for Navigation Bar Responsiveness */
@@ -361,6 +382,7 @@ header {
         gap: 20px;
     }
 }
+
 /* Website Hero Section CSS End */
 
 /* Features Section CSS Start */
@@ -385,6 +407,7 @@ header {
 
 /* Custom Breakpoint According to Navbar */
 @media screen and (min-width: 1110px) {
+
     .features-section .left-color,
     .features-section .right-color {
         display: flex;
@@ -521,6 +544,7 @@ header {
     transform: translate(0);
     cursor: pointer;
 }
+
 /* Features Section CSS End */
 
 /* Offer Section CSS Start - 30% off Chair Section */
@@ -626,6 +650,7 @@ header {
 }
 
 @media screen and (min-width: 1110px) {
+
     .sets-section .sets-left,
     .sets-section .sets-right {
         display: block;
@@ -736,6 +761,7 @@ header {
         display: block;
     }
 }
+
 /* Offer Section CSS End */
 
 /* Special Deals Section CSS Start */
@@ -788,8 +814,8 @@ header {
     padding: 20px;
     height: 100%;
     width: 100%;
-    background: rgb(245,245,245);
-    background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(255,255,255,0) 100%);
+    background: rgb(245, 245, 245);
+    background: linear-gradient(90deg, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .sales-container .sales-card .sales-details p {
@@ -818,6 +844,7 @@ header {
         flex-wrap: wrap;
     }
 }
+
 /* Special Deals Section CSS End */
 
 /* Decoration and Architect Section CSS Start */
@@ -864,6 +891,7 @@ header {
 
 /* Reducing Padding for Smaller devices */
 @media screen and (max-width:576px) {
+
     .decoration-section,
     .architect-section {
         padding: 50px 20px;
@@ -873,6 +901,7 @@ header {
         padding-top: 0;
     }
 }
+
 /* Decoration and Architect Section CSS End */
 
 /* Newsletter Section CSS Start */
@@ -931,6 +960,7 @@ header {
         width: 100%;
     }
 }
+
 /* Decoration and Architect Section CSS End */
 
 /* Blogs Section CSS Start*/
@@ -1046,6 +1076,7 @@ header {
         flex-wrap: wrap;
     }
 }
+
 /* Blogs Section CSS Ends */
 
 /* Our Support CSS Start */
@@ -1070,6 +1101,7 @@ header {
 }
 
 @media screen and (min-width: 1110px) {
+
     .support-section .s-left,
     .support-section .s-right {
         display: block;
@@ -1113,11 +1145,13 @@ header {
     .support-container {
         flex-direction: column;
     }
+
     .support-container .s-item img {
         width: 50px;
         height: 50px;
     }
 }
+
 /* Our Support Section CSS End */
 
 /* Brands Section CSS Start */
@@ -1157,6 +1191,7 @@ header {
         height: 100px;
     }
 }
+
 /* Brands Section CSS End */
 
 /* Footer CSS Start */
@@ -1261,4 +1296,5 @@ footer .copyright-container>div {
         width: 100%;
     }
 }
+
 /* Footer CSS End */
