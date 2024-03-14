@@ -1,0 +1,178 @@
+.products-section {
+    padding: 100px 20px;
+    background-color: var(--bright-gray);
+}
+
+.products-container {
+    margin: 0 auto;
+    max-width: 1450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    row-gap: 50px;
+}
+
+.product-card {
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-card .product-img-container {
+    max-width: 330px;
+    height: 310px;
+    position: relative;
+}
+
+.product-card .product-img-container .product-status {
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    transform-origin: 50px 22px;
+    padding: 8px 20px;
+}
+
+.product-card .product-img-container .product-status.new {
+    background-color: var(--rasin-black);
+}
+
+.product-card .product-img-container .product-status.hot {
+    background-color: #F5540D;
+    padding: 8px 23px;
+}
+
+.product-card .product-img-container .product-status.sale {
+    background-color: #189E14;
+}
+
+.product-card .product-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--cultured);
+}
+
+.product-card .product-buttons {
+    background-color: var(--cultured);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+}
+
+.product-card .product-buttons .product-cart-btn {
+    border-radius: 30px;
+    padding: 13px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+}
+
+.product-card .product-buttons button {
+    background-color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-card .product-details {
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+}
+
+.product-card .product-details .product-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card .product-details .product-brand p {
+    font-size: 14px;
+    color: var(--text-silver);
+}
+
+.product-card .product-details .product-brand .product-offer {
+    color: white;
+    font-size: 16px;
+    padding: 2px 6px;
+    background-color: var(--rasin-black);
+}
+
+.product-card .product-details .product-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.product-card .product-details .product-price-container .product-price {
+    color: var(--text-silver);
+}
+
+.product-button-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Products White Button CSS */
+.product-button {
+    position: relative;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--rasin-black);
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    border: 1px solid var(--rasin-black);
+    background: transparent;
+    transition: 0.1s;
+}
+
+.product-button .button-text {
+    padding: 6px 23px;
+}
+
+.product-button .fa-circle {
+    font-size: 8px;
+}
+
+.product-button .fa-circle.circle-one {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.product-button .fa-circle.circle-two {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.product-button:hover {
+    transform: scale(1.07);
+}
+
+.product-button:hover .fa-circle.circle-one {
+    border-radius: 50%;
+    background-color: var(--rasin-black);
+}
+
+.product-button:hover .fa-circle.circle-two {
+    border-radius: 50%;
+    background-color: var(--rasin-black);
+}

@@ -505,6 +505,58 @@ background: linear-gradient(41deg, rgba(255,255,255,1) 20%, rgba(252,70,107,0) 5
     cursor: pointer;
 }
 
+/* Decoration and Architect Section CSS */
+.decoration-section {
+    padding: 100px 20px;
+    background-color: var(--bright-gray);
+}
+
+.architect-section {
+    padding: 100px 20px;
+    background-color: var(--cultured);
+}
+
+.architect-section .da-container {
+    flex-wrap: wrap-reverse;
+}
+
+.da-container {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.da-container .da-description {
+    padding-top: 30px;
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.da-container .da-description h3 {
+    font-weight: 700;
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+}
+
+.da-container .da-description p {
+    line-height: 25px;
+}
+
+@media screen and (max-width:600px) {
+    .decoration-section, .architect-section {
+        padding: 50px 20px;
+    }
+
+    .da-container .da-description {
+        padding-top: 0;
+    }
+}
+
 /* Newsletter Section CSS */
 .newsletter-section {
     padding: 100px 20px;
