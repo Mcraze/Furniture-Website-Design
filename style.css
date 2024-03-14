@@ -591,6 +591,134 @@
 }
 
 /* Additional Products section */
+.sets-section {
+    display: flex;
+}
+
+.sets-section .sets-center {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: var(--cultured);
+}
+
+/* Left and Right Sections CSS */
+.sets-section .sets-left {
+    display: none;
+    width: 130px;
+    background-color: var(--cultured);
+}
+
+.sets-section .sets-right {
+    display: none;
+    width: 130px;
+    background-color: white;
+}
+
+@media screen and (min-width: 1110px) {
+    .sets-section .sets-left, .sets-section .sets-right {
+        display: block;
+    }
+}
+
+.sets-section .sets-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.product-set {
+    max-width: 450px;
+    flex-grow: 1;
+}
+
+.product-set .product-set-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-set .product-set-heading .p-s-heading {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.product-set .product-set-heading .product-set-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.product-set .product-set-heading .product-set-btn-container button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: var(--text-silver);
+    gap: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+.product-set hr {
+    margin-top: 10px;
+}
+
+.product-set .product-set-icons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-set .product-set-icons > div {
+    display: flex;
+    gap: 25px;
+}
+
+.product-set .product-set-icons > div img {
+    max-width: 150px;
+    height: 135px;
+    width: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.product-set .product-set-icons > div h6 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.product-set .product-set-icons > div p {
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+.product-set .product-set-icons .product-set-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width:1110px) {
+    .sets-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sets-container .product-set.desktop-only {
+        display: none;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .sets-container .product-set.desktop-only {
+        display: block;
+    }
+}
 
 /* Decoration and Architect Section CSS */
 .decoration-section {
